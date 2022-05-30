@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row class="text-center">
-      <v-col cols="12"> Cesium Demo </v-col>
+      <v-col cols="12"> Cesium Experiment </v-col>
     </v-row>
   </v-container>
 </template>
