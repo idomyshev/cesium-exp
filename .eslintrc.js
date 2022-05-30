@@ -11,7 +11,9 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2020,
   },
-  rules: {},
+  rules: {
+    "no-unused-vars": "off",
+  },
   overrides: [
     {
       files: [
