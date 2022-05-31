@@ -29,6 +29,19 @@
         </tbody>
     </table>
 </div>
+<style>
+    @import url(./bucket.css);
+    #toolbar {
+        background: rgba(42, 42, 42, 0.8);
+        padding: 4px;
+        border-radius: 4px;
+    }
+    #toolbar input {
+        vertical-align: middle;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+</style>
 <script>
   const viewer = new Cesium.Viewer("cesiumContainer");
 
@@ -124,7 +137,6 @@
     Cesium.knockout.track(viewModel);
 
     const toolbar = document.getElementById("toolbar");
-    console.log(toolbar)
     Cesium.knockout.applyBindings(viewModel, toolbar);
 
     function subscribeParameter(name) {
