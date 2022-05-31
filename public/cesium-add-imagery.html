@@ -48,6 +48,22 @@
 <script>
   const viewer = new Cesium.Viewer("cesiumContainer");
 
+  // Begin of example: add imagery layer
+  Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI5YjNiMTI2Yi01NDk3LTQyNjUtYjk4NS0wN2NkOWRiOTYwMjQiLCJpZCI6OTU4NTYsImlhdCI6MTY1Mzk5NjEyOH0.B1hHJyHuD3JsJCgO20wCgBBrGRhT37IaYnMuBXvUdu4';
+
+  const layer = viewer.imageryLayers.addImageryProvider(
+    new Cesium.IonImageryProvider({assetId: 1074286})
+  );
+
+  (async () => {
+    try {
+      await viewer.zoomTo(layer);
+    } catch (error) {
+      console.log(error);
+    }
+  })();
+  // End of example: add imagery layer
+
   const options = {
     camera: viewer.scene.camera,
     canvas: viewer.scene.canvas,
