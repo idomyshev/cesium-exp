@@ -31,7 +31,7 @@
     </table>
 </div>
 <style>
-    @import url(./bucket.css);
+    @import url(./css/bucket.css);
 
     #toolbar {
         background: rgba(42, 42, 42, 0.8);
@@ -54,7 +54,7 @@
   };
   const dataSourcePromise = viewer.dataSources.add(
     Cesium.KmlDataSource.load(
-      "./facilities.kml",
+      "./data/facilities.kml",
       options
     )
   );
