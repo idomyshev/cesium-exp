@@ -82,7 +82,7 @@
 
     const pinBuilder = new Cesium.PinBuilder();
     const pin50 = pinBuilder
-      .fromText("50+", Cesium.Color.RED, 48)
+      .fromText("50+", Cesium.Color.GREEN, 48)
       .toDataURL();
     const pin40 = pinBuilder
       .fromText("40+", Cesium.Color.ORANGE, 48)
@@ -90,9 +90,8 @@
     const pin30 = pinBuilder
       .fromText("30+", Cesium.Color.YELLOW, 48)
       .toDataURL();
-    const pin20 = pinBuilder
-      .fromText("20+", Cesium.Color.GREEN, 48)
-      .toDataURL();
+    const labelText = 'Listening to music';
+    const pin20 = `data:image/svg+xml;utf8,<svg width="150" height="41" xmlns="http://www.w3.org/2000/svg"><g><rect x="0" y="0" width="150" height="41" style="stroke: rgb(0, 0, 0); fill: rgb(213, 23, 23);"/><text style="fill: rgb(250, 245, 245); font-family: Arial, sans-serif; font-size: 14px;" x="20" y="25">${labelText}</text></g></svg>`;
     const pin10 = pinBuilder
       .fromText("10+", Cesium.Color.BLUE, 48)
       .toDataURL();
